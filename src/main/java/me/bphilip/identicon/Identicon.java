@@ -42,6 +42,6 @@ public class Identicon {
         return identicon;
     }
 
-    private Generator generator;
+    private final Generator generator;
 
 }

@@ -27,17 +27,15 @@ public class DefaultGenerator implements Generator {
         for (int i = 0; i < hash.length(); i += 2) {
             int s = i / 2;
 
-            Integer numerator = Integer.parseInt(hash.charAt(i) + "", 16);
+            int numerator = Integer.parseInt(hash.charAt(i) + "", 16);
             boolean v = (int) Math.round(numerator / 10.0) > 0;
             if (s % 3 == 0) {
                 array[s / 3][0] = v;
                 array[s / 3][4] = v;
-            }
-            else if (s % 3 == 1) {
+            } else if (s % 3 == 1) {
                 array[s / 3][1] = v;
                 array[s / 3][3] = v;
-            }
-            else {
+            } else {
                 array[s / 3][2] = v;
             }
         }
